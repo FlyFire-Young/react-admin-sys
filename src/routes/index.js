@@ -27,6 +27,11 @@ import SampleTables from "../components/tables/SampleTables";
 
 import LocaleProviders from "../components/Internationalization/LocaleProviders";
 
+import BasicAnimations from "../components/animation/BasicAnimations"
+import ExampleAnimations from "../components/animation/ExampleAnimations"
+
+import ViserCharts from "../components/charts/ViserCharts"
+import ViserChartsWordCloud from "../components/charts/ViserChartsWordCloud"
 
 export default class CRouter extends Component {
 	requireAuth = (permission, component) => {
@@ -63,6 +68,12 @@ export default class CRouter extends Component {
 
 				<Route exact path="/app/table/basicTables" component={BasicTables}/>
 				<Route exact path="/app/table/sampleTables" component={SampleTables}/>
+
+				<Route exact path="/app/animation/basicAnimations" component={BasicAnimations}/>
+				<Route exact path="/app/animation/exampleAnimations" component={ExampleAnimations}/>
+
+				<Route exact path="/app/chart/viserCharts" component={ViserCharts}/>
+				<Route exact path="/app/chart/viserChartsWorldCloud" component={ViserChartsWordCloud}/>
 
 				<Route exact path="/app/Internationalization/localeProviders" component={LocaleProviders}/>
 			</Switch>

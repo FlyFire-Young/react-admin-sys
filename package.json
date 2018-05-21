@@ -19,6 +19,8 @@
     "server": "node script/server.js"
   },
   "devDependencies": {
+    "@antv/data-set": "^0.8.9",
+    "@antv/g2": "^3.0.12",
     "antd": "^3.3.3",
     "babel-core": "^6.26.0",
     "babel-eslint": "^8.2.2",
@@ -39,6 +41,7 @@
     "extract-text-webpack-plugin": "^3.0.2",
     "file-loader": "^1.1.11",
     "html-webpack-plugin": "^3.2.0",
+    "jquery": "^3.3.1",
     "less": "^3.0.1",
     "less-loader": "^4.1.0",
     "material-ui": "^0.20.0",
@@ -53,6 +56,7 @@
     "screenfull": "^3.3.2",
     "style-loader": "^0.20.3",
     "sw-precache-webpack-plugin": "^0.11.5",
+    "viser-react": "^2.2.6",
     "webpack": "^4.4.1",
     "webpack-cli": "^2.0.14",
     "webpack-dev-middleware": "^3.1.2",

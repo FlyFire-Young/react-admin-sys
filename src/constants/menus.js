@@ -45,32 +45,32 @@ export const menus = [
 	{
 		key: "/app/animation", title: "动画", icon: "rocket",
 		sub: [
-			{key: "/app/animation/basicAnimations", title: "基础动画", icon: "",},
-			{key: "/app/animation/exampleAnimations", title: "动画案例", icon: "",},
+			{key: "/app/animation/basicAnimations", title: "基础动画", icon: "shake",},
+			{key: "/app/animation/exampleAnimations", title: "动画案例", icon: "phone",},
 		],
 	},
 	{
 		key: "/app/chart", title: "图表", icon: "area-chart",
 		sub: [
-			{key: "/app/chart/echarts", title: "echarts", icon: "",},
-			{key: "/app/chart/recharts", title: "recharts", icon: "",},
+			{key: "/app/chart/viserCharts", title: "viserCharts", icon: "",},
+			{key: "/app/chart/viserChartsWorldCloud", title: "词云", icon: "",},
 		],
 	},
-	{
-		key: "/sub4", title: "页面", icon: "switcher",
-		sub: [
-			{key: "/login", title: "登录", icon: "",},
-			{key: "/404", title: "404", icon: "",},
-		],
-	},
-	{
-		key: "/app/auth", title: "权限管理", icon: "safety",
-		sub: [
-			{key: "/app/auth/basic", title: "基础演示", icon: "",},
-			{key: "/app/auth/routerEnter", title: "路由拦截", icon: "",},
-		],
-	},
-	{
-		key: "/app/cssModule", title: "cssModule", icon: "star",
-	},
+	// {
+	// 	key: "/sub4", title: "页面", icon: "switcher",
+	// 	sub: [
+	// 		{key: "/login", title: "登录", icon: "",},
+	// 		{key: "/404", title: "404", icon: "",},
+	// 	],
+	// },
+	// {
+	// 	key: "/app/auth", title: "权限管理", icon: "safety",
+	// 	sub: [
+	// 		{key: "/app/auth/basic", title: "基础演示", icon: "",},
+	// 		{key: "/app/auth/routerEnter", title: "路由拦截", icon: "",},
+	// 	],
+	// },
+	// {
+	// 	key: "/app/cssModule", title: "cssModule", icon: "star",
+	// },
 ];
