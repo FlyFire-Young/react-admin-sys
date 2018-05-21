@@ -22,10 +22,10 @@ export default class ViserChartsRelattions extends React.Component {
             type: 'graph',
             edges: d => d.links,
         });
-        dv.transform({
-            type: 'diagram.arc',
-            marginRatio: 0.5,
-        });
+        // dv.transform({
+        //     type: 'diagram.arc',
+        //     marginRatio: 0.5,
+        // });
         this.setState({
             edgesData: dv.edges,
             nodesData: dv.nodes,
