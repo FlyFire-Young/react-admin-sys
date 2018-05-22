@@ -1,5 +1,5 @@
 export const menus = [
-	{key: "/app/dashboard/index", title: "首页", icon: "mobile",},
+	{key: "/app/real/home", title: "首页", icon: "mobile",},
 	{
 		key: "/app/ui", title: "UI", icon: "scan",
 		sub: [
@@ -52,25 +52,15 @@ export const menus = [
 	{
 		key: "/app/chart", title: "图表", icon: "area-chart",
 		sub: [
-			{key: "/app/chart/viserCharts", title: "viserCharts", icon: "",},
-			{key: "/app/chart/viserChartsWorldCloud", title: "词云", icon: "",},
+			{key: "/app/chart/viserCharts", title: "viserCharts", icon: "desktop",},
+			{key: "/app/chart/viserChartsWorldCloud", title: "词云", icon: "cloud",},
 		],
 	},
-	// {
-	// 	key: "/sub4", title: "页面", icon: "switcher",
-	// 	sub: [
-	// 		{key: "/login", title: "登录", icon: "",},
-	// 		{key: "/404", title: "404", icon: "",},
-	// 	],
-	// },
-	// {
-	// 	key: "/app/auth", title: "权限管理", icon: "safety",
-	// 	sub: [
-	// 		{key: "/app/auth/basic", title: "基础演示", icon: "",},
-	// 		{key: "/app/auth/routerEnter", title: "路由拦截", icon: "",},
-	// 	],
-	// },
-	// {
-	// 	key: "/app/cssModule", title: "cssModule", icon: "star",
-	// },
+	{
+		key: "/sub4", title: "页面", icon: "switcher",
+		sub: [
+			{key: "/login", title: "登录", icon: "cloud",},
+		],
+	},
+
 ];

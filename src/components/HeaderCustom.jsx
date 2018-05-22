@@ -13,6 +13,7 @@ class HeaderCustom extends Component {
 	state = {
 		current: "bank",
 		visible: false,
+        user: '',
 	};
 	handleClick = (e) => {
 		this.setState({
@@ -24,6 +25,10 @@ class HeaderCustom extends Component {
 			screenfull.request();
 		}
 	};
+    logout = () => {
+        localStorage.removeItem('user');
+        this.props.history.push('/login')
+    };
 	popoverHide = () => {
 		this.setState({
 			visible: false,
@@ -54,36 +59,22 @@ class HeaderCustom extends Component {
 					onClick={this.handleClick}
 					selectedKeys={[this.state.current]}
 					mode="horizontal"
-					style={{lineHeight: "64px", float: "left"}}
-				>
-					<Menu.Item key="full" onClick={this.screenFull} >
-						<Icon type="arrows-alt" onClick={this.screenFull} />
-					</Menu.Item>
-					<Menu.Item key="profile">
-						<Icon type="profile"/>文档
-					</Menu.Item>
-					<Menu.Item key="download">
-						<Icon type="download"/>下载
-					</Menu.Item>
-					<Menu.Item key="bank">
-						<Icon type="bank"/>管理
-					</Menu.Item>
-				</Menu>
-				<Menu
-					onClick={this.handleClick}
-					selectedKeys={[this.state.current]}
-					mode="horizontal"
 					style={{lineHeight: "64px", float: "right"}}
 				>
 					<Menu.Item key="google" disabled>
-						<Icon type="google"/>Young
+						<Icon type="google"/>{this.props.user.userName}
 					</Menu.Item>
-					<Menu.Item key="user" disabled>
-						<Icon type="user"/>Young
-					</Menu.Item>
-					<Menu.Item key="poweroff">
-						<Icon type="poweroff"/>退出
-					</Menu.Item>
+					<SubMenu title={<span><Icon type="user"/>{this.props.user.userName}</span>}>
+						<MenuItemGroup title="用户中心">
+							<Menu.Item key="setting:1">你好 - {this.props.user.userName}</Menu.Item>
+							<Menu.Item key="setting:2">个人信息</Menu.Item>
+							<Menu.Item key="logout"><span onClick={this.logout}>退出登录</span></Menu.Item>
+						</MenuItemGroup>
+						<MenuItemGroup title="设置中心">
+							<Menu.Item key="setting:3">个人设置</Menu.Item>
+							<Menu.Item key="setting:4">系统设置</Menu.Item>
+						</MenuItemGroup>
+					</SubMenu>
 				</Menu>
 			</Header>
 		);
