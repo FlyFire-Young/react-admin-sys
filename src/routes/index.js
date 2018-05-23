@@ -32,6 +32,7 @@ import ExampleAnimations from "../components/animation/ExampleAnimations"
 
 import ViserCharts from "../components/charts/ViserCharts"
 import ViserChartsWordCloud from "../components/charts/ViserChartsWordCloud"
+import RealHome from "../components/RealHome";
 
 export default class CRouter extends Component {
 	requireAuth = (permission, component) => {
@@ -45,6 +46,7 @@ export default class CRouter extends Component {
 	render() {
 		return (
 			<Switch>
+				<Route exact path="/app/real/home" component={RealHome}/>
 				<Route exact path="/app/ui/buttons" component={Buttons}/>
 				<Route exact path="/app/ui/icons" component={Icons}/>
 				<Route exact path="/app/ui/paginations" component={Paginations}/>

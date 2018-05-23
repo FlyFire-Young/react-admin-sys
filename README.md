@@ -107,6 +107,7 @@ react + antd + antv组件库的后台管理系统。
 	|           |-- UploadTypes.jsx                                       // ui实例
 	|		|-- BreadcrumbCustom.jsx                   	                  // 面包屑
 	|		|-- HeaderCustom.jsx                   	                      // 布局顶部
+	|		|-- RealHome.jsx                   	                          // 首页
 	|		|-- SiderCustom.jsx                   	                      // 布局左侧边栏
 	|		|-- SiderMenu.js                   	                          // 布局左侧边栏
 	|   |-- constants                                                     // 内容
