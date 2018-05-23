@@ -9,13 +9,11 @@
     "react-scripts": "1.1.2"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "dev": "webpack-dev-server --devtool eval --progress --colors --content-base build",
-    "start3": "webpack-dev-server --open --config config/webpack.dev.js",
-    "build3": "webpack --config config/webpack.prod.js",
+    "start": "webpack-dev-server --open --config config/webpack.dev.js",
+    "build": "webpack --config config/webpack.prod.js",
     "server": "node script/server.js"
   },
   "devDependencies": {
