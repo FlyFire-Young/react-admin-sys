@@ -1,10 +1,6 @@
-/**
- * Created by hao.cheng on 2017/5/3.
- */
 import React from 'react';
 import { Row, Col, Card, Timeline, Icon } from 'antd';
 import BreadcrumbCustom from './BreadcrumbCustom';
-
 
 class RealHome extends React.Component {
     render() {

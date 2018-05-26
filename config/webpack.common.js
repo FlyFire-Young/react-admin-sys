@@ -1,4 +1,5 @@
 const path = require('path');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const InterpolateHtmlPlugin = require('react-dev-utils/InterpolateHtmlPlugin');
@@ -47,10 +48,11 @@ module.exports = {
 				use: [
 					{
 						loader: 'file-loader',
-						options: {}
+                        options: {
+                        }
 					}
 				]
-			}
+			},
 
         ]
 
@@ -60,9 +62,39 @@ module.exports = {
         // new InterpolateHtmlPlugin({
         //     PUBLIC_URL: ""
         // }),
+        new CopyWebpackPlugin([
+            {
+                "context": "src",
+                "to": "",
+                "from": {
+                    "glob": "assets\\**\\*",
+                    "dot": true
+                }
+            },
+            {
+                "context": "public",
+                "to": "",
+                "from": {
+                    "glob": "favicon.ico",
+                    "dot": true
+                }
+            }
+        ]),
 		new HtmlWebpackPlugin({
-			inject: true,
-			template: paths.appHtml,
+			// inject: true,
+			// template: paths.appHtml,
+            "template": paths.appHtml,
+            "hash": false,
+            "inject": true,
+            "compile": true,
+            "favicon": false,
+            "minify": false,
+            "cache": true,
+            "showErrors": true,
+            "chunks": "all",
+            "excludeChunks": [],
+            "title": "Webpack App",
+            "xhtml": true,
 		}),
     ],
 
