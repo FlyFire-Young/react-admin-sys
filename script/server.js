@@ -5,13 +5,12 @@ const webpackHotMiddleware =require('webpack-hot-middleware');
 const opn = require('opn');
 const app = express();
 const webpackConfig = require('../config/webpack.dev.js');
-const webpackCommonConfig = require('../config/webpack.common.js');
 const compiler = webpack(webpackConfig);
 const port = 3005;
 const autoOpenBrowser = !!true;
 
 const devMiddleware = webpackDevMiddleware(compiler, {
-    publicPath: webpackCommonConfig.output.publicPath,
+    publicPath: webpackConfig.output.publicPath,
     quiet: true
 });
 

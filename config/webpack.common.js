@@ -9,7 +9,6 @@ process.env.BABEL_ENV = 'development';
 process.env.NODE_ENV = 'development';
 
 module.exports = {
-    mode: 'development',
     entry:
     //     {
     //         appIndexJs: '../src/index.js',
@@ -58,22 +57,15 @@ module.exports = {
     },
     plugins: [
         new CleanWebpackPlugin(['../dist']),
-		// new InterpolateHtmlPlugin({
-		// 	PUBLIC_URL: publicUrl
-		// }),
+        // new InterpolateHtmlPlugin({
+        //     PUBLIC_URL: ""
+        // }),
 		new HtmlWebpackPlugin({
 			inject: true,
 			template: paths.appHtml,
 		}),
     ],
-    output: {
-        pathinfo: true,
-        filename: 'static/js/[name].bundle.js',
-        chunkFilename: 'static/js/[name].chunkBundle.js',
-        path: paths.appBuild,
-        // path: path.resolve(__dirname, 'dist'),
-        publicPath: publicPath,
-    },
+
 	resolve: {
 		extensions: ['.web.js', '.js', '.json', '.web.jsx', '.jsx'],
 	}

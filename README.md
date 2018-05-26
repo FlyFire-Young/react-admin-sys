@@ -20,6 +20,8 @@ react + antd + antv组件库的后台管理系统。
 	|   |-- favicon.ico                                                   // ico
 	|   |-- index.html                                                    // index.html
 	|   |-- manifest.json                                                 // json信息
+	|-- script                                                            // 启动js
+    	|   |-- server.js                                                 // node启动js
 	|-- src                                                               // 源码目录
 	|   |-- action                                                        // 状态
 	|       |-- index.js                                                  // 请求接口
