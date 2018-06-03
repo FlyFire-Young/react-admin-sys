@@ -1,4 +1,5 @@
 const path = require('path');
+const webpack = require('webpack');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -60,7 +61,8 @@ module.exports = {
     plugins: [
         new CleanWebpackPlugin(['../dist']),
         // new InterpolateHtmlPlugin({
-        //     PUBLIC_URL: ""
+        //     NODE_ENV:'development',
+        //     PUBLIC_URL: ''
         // }),
         new CopyWebpackPlugin([
             {
@@ -96,6 +98,7 @@ module.exports = {
             "title": "Webpack App",
             "xhtml": true,
 		}),
+        new webpack.HotModuleReplacementPlugin(),
     ],
 
 	resolve: {

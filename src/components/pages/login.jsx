@@ -23,7 +23,7 @@ class LoginForm extends React.Component {
         const {history} = this.props;
         if (this.realAuthCus) {   // 判断是否登陆
             localStorage.setItem('user', JSON.stringify(this.userDataCus));
-            history.push('/');
+            history.push('/app/real/home');
         }
     }
 
